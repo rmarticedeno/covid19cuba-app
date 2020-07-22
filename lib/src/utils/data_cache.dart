@@ -14,6 +14,7 @@ class DataCache {
     DataCache(name: 'downloads', key: Constants.prefDownloads),
     DataCache(name: 'faqs', key: Constants.prefFaqs),
     DataCache(name: 'news', key: Constants.prefNews),
+    DataCache(name: 'phases', key: Constants.prefPhases),
     DataCache(name: 'protocols', key: Constants.prefProtocols),
     DataCache(name: 'tips', key: Constants.prefTips),
     DataCache(name: 'full', key: Constants.prefData),
@@ -24,7 +25,6 @@ class DataCache {
       var hasData = PrefService.getString(item.key) != null;
       if (hasData) continue;
       var content = await rootBundle.loadString(item.path);
-      print(content);
       PrefService.setString(item.key, content);
     }
   }

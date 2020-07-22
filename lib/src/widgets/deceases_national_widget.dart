@@ -24,15 +24,6 @@ class DeceasesNationalWidget extends StatelessWidget {
           ),
         ),
         Container(
-          margin: data.all.note == null || data.all.note == ''
-              ? EdgeInsets.all(0)
-              : EdgeInsets.only(left: 5, right: 5, top: 5),
-          child: Card(
-            color: Colors.red,
-            child: NoteWidget(note: data.all.note),
-          ),
-        ),
-        Container(
           margin: EdgeInsets.only(left: 5, right: 5, top: 5),
           child: Card(
             child: MapWebViewWidget(
